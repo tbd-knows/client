@@ -2,7 +2,7 @@
 
 [The server design](https://github.com/tbd-knows/server/blob/docs/user-service-v1/docs/user-service/design.md) is the implementation source. Use that branch until its planning PR is merged, then link to `main`. Do not maintain a second copy of the specification here.
 
-Build one Vite TypeScript package in `apps/web/`, without a frontend framework or component library. Serve `/join` through the Vercel SPA fallback. Vercel project: `client` in the supplied team; project creation currently needs a team member to resolve a 403.
+Build one Vite TypeScript package in `apps/web/`, without a frontend framework or component library. Serve `/join` through the Vercel SPA fallback. Vercel project: `client` in the supplied team. The founder confirms it is created and the repo is imported. Verification is deferred until deployment is needed; it does not block planning.
 
 The page has only ready, working, success, and recoverable/error states. Opening it must not verify a token or create an account. The recipient presses Join TBD; the page verifies the email token through Supabase and calls the Python API with the resulting bearer token. Retry the API using the same in-memory session after a network error. After successful joining, display confirmation without implying that Messaging or Agent already exists.
 
