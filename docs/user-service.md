@@ -56,7 +56,7 @@ No Vercel secret values are needed by the static page. Set the three public envi
 
 Latest full browser run: **38 passed, zero skipped** (19 scenarios in each of Chromium and WebKit). `npm ci`, `npm run check`, `npm run build` (also run by the test harness), and npm dependency audit pass with zero reported vulnerabilities. A mobile viewport preview was also inspected using fake fixtures. No live delivery or deployment proof is claimed. Chromium and WebKit tests exercise explicit invitation/recovery verification, passive GET/fragment scrubbing, duplicate-click guard, API/network/malformed-response failures, same-session retry, invalid/expired/used links, denied admission, reload recovery, expiry without refresh, success cleanup, no persistent storage, and no referrer. These are browser tests against the real bundled SDK with fake HTTP responses; they do not prove deployed Auth, SMTP, or inbox delivery.
 
-Client review and production deployment are complete. Remaining: Supabase Dashboard configuration and real invitation/inbox/join/recovery acceptance under TBD-16. Gmail SMTP and Vercel verification have not blocked local implementation. The founder must enter a Google App Password directly in Supabase and explicitly authorize the real test recipient before delivery proof. Never publish that personal sender address, credentials, invitation links, or private email screenshots.
+Client review and production deployment are complete. Founder recipient authorization and SMTP entry are recorded, and actual inbox delivery now passes. Fresh Invite/Magic Link output still uses default verification links; correct the templates using the batch below before real-link Join/retry/recovery acceptance under TBD-16. No new SMTP credential entry or recipient authorization is needed. Never publish the personal sender address, credentials, invitation links, or private email screenshots.
 
 
 ## Verified Vercel setup and production checkpoint
@@ -74,7 +74,7 @@ The production alias serves the exact reviewed client commit. Deployed bundle ve
 
 Backend used: accepted live commit `a9045c8d4ef369188581c35d2fe21004aa80590f`. No backend changes or prior acceptance reruns were required for Vercel setup.
 
-No real email has been sent yet. Complete the Dashboard batch below; then test only the privately authorized recipient pair. SMTP acceptance alone does not prove inbox delivery. Both existing PRs remain unmerged and TBD-16 remains In Progress.
+Live email checkpoint: initial invitations and fresh resends reached both authorized aliases in the verified Gmail inbox. Fresh Invite and Magic Link emails still have default subjects and Supabase `/auth/v1/verify` links. These links were left unopened by the acceptance sequence. Both entries have zero application Users; the individual Auth identity had already been confirmed, while the business identity remains unconfirmed. Correct both templates below and verify fresh rendered output before testing real-link passive GET, explicit Join, valid-token API failure, retry, reload and founder-resend recovery. The Dashboard browser redirects to sign-in, and connected database tools cannot edit Auth templates. Both existing PRs remain unmerged and TBD-16 remains In Progress. Accepted deployment/local checks are preserved; no code changes or local test reruns were needed for this checkpoint.
 
 
 ## Supabase Dashboard ready-to-paste batch
