@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+.vercel/
+playwright-report/
+test-results/
+*.private.json
