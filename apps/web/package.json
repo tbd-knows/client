@@ -1,0 +1,16 @@
+{
+  "name": "@tbd/join-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.12.0 <23"},
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "build": "npm run check && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test"
+  },
+  "dependencies": {"@supabase/supabase-js": "2.118.0"},
+  "devDependencies": {"@playwright/test": "1.64.1", "typescript": "7.0.2", "vite": "8.3.5"}
+}
