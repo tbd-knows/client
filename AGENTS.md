@@ -6,3 +6,5 @@
 - Verify on explicit Join only. Do not auto-consume email tokens on page load. Preserve retry behavior without persistent browser sessions.
 - Use fake data, pinned packages, and a committed npm lockfile. Never commit invitation links, real contacts, secrets, or screenshots of private email.
 - Markdown belongs in `docs/`. All diagrams are editable Excalidraw files; link to the canonical server drawing rather than duplicate it.
+
+- Do not merge implementation PRs until Robel Bruk and Robel Kebede have both reviewed and explicitly approved merging. Agent technical acceptance is not founder approval.
