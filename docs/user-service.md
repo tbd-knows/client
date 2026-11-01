@@ -1,8 +1,8 @@
 # Join TBD client
 
-[The canonical server design](https://github.com/tbd-knows/server/blob/main/docs/user-service/design.md) is the source of truth. The backend implementation is reviewed at `2bb8c5103d30a48199f506770672bda8957d5e6e` on [server PR #2](https://github.com/tbd-knows/server/pull/2), still unmerged by founder instruction. Use [that reviewed branch's design](https://github.com/tbd-knows/server/blob/robiemelaku/tbd-14-user-service/docs/user-service/design.md) and [editable drawing](https://github.com/tbd-knows/server/blob/robiemelaku/tbd-14-user-service/docs/user-service/architecture.excalidraw) until coordinated release. The planning PRs are merged and approved; no planning review is pending.
+[The canonical server design](https://github.com/tbd-knows/server/blob/main/docs/user-service/design.md) is the source of truth. Backend and client implementation reviews and final v1 acceptance are **Accepted**. Use the canonical main design and [editable drawing](https://github.com/tbd-knows/server/blob/main/docs/user-service/architecture.excalidraw). The founder authorized coordinated merge of both existing PRs and issue closure.
 
-Work: [TBD-15](https://linear.app/apt-knows/issue/TBD-15). Client branch: `robiemelaku/tbd-15-join-page`. TBD-15 review passed at the reviewed code SHA; TBD-16 is In Progress. All client rounds use this one branch/PR; backend fixes stay on its existing branch. After client review, TBD-16 verifies deployments from these branches. Merge both only after complete service acceptance.
+Work: [TBD-15](https://linear.app/apt-knows/issue/TBD-15), [TBD-16](https://linear.app/apt-knows/issue/TBD-16). **Accepted.** The documented live and controlled evidence mix is approved. Production Git tracking follows main in the existing client project. Merge and deployed SHAs are recorded separately in the final issue comments/report.
 
 ## Runtime contract
 
@@ -81,7 +81,7 @@ During final reconciliation, both consumed real recovery links were reopened aga
 
 The canonical [full acceptance matrix](https://github.com/tbd-knows/server/blob/robiemelaku/tbd-14-user-service/docs/user-service/implementation-status.md#reconciled-acceptance-matrix) names every case, evidence layer, and exact hosted-only limits. A confirmed but unapproved identity now has direct FastAPI/SDK/real-database 403/no-User proof; tampering, concurrency, lost committed-response recovery and uncertain email-send injection retain their accepted controlled evidence. Do not claim every injected failure was reproduced against hosted Auth.
 
-Raw MIME has the correct /join fragment destinations for invite and email types. Subjects remain `You've been invited` / `Your sign-in link` despite saved `Join TBD` subjects: **nonblocking configuration difference**. No template-body correction or SMTP re-entry is currently needed. Both PRs remain open/unmerged and TBD-16 remains In Progress for final acceptance review. Deployed SHAs above remain unchanged; this reconciliation changes evidence only.
+Raw MIME has the correct /join fragment destinations for invite and email types. Subjects remain `You've been invited` / `Your sign-in link` despite saved `Join TBD` subjects: **nonblocking configuration difference**. No template-body correction or SMTP re-entry is currently needed. Final acceptance is **Accepted**; both PRs are authorized for merge and completed issues for closure. No additional hosted injection or account reset is required. Deployed SHAs above remain unchanged; this reconciliation changes evidence only.
 
 ## Supabase Dashboard ready-to-paste batch
 
