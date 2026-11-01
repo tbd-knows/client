@@ -50,7 +50,7 @@ Playwright starts its own local preview after a production build, supplying fake
 
 Use the **existing** Vercel `client` project in `robel-kebedes-projects`; inspect settings before any changes. Set Root Directory to `apps/web` (project setting, not a `vercel.json` field), framework Vite, Node 22, install `npm ci`, build `npm run build`, output `dist`. `apps/web/vercel.json` supplies `/join` → `/index.html` and no-store/no-referrer/nosniff response headers.
 
-No Vercel secret values are needed by the static page. Set the three public environment values for the intended deployment target. Backend URL, Supabase templates, CORS, and production Site URL must agree; these are coordinated TBD-16 steps. The verified production join URL is **https://client-pi-five-28.vercel.app/join**. Deployment metadata confirms reviewed commit **2c5ebe0fa33d929a85cc74d47807199c162aac7a** on `robiemelaku/tbd-15-join-page`, deployment `dpl_4umzXBnL2yQFKQAjksSZaFuJEMJJ` (READY, production). Neither an automatic preview attempt nor a local build establishes deployed acceptance.
+No Vercel secret values are needed by the static page. Set the three public environment values for the intended deployment target. Backend URL, Supabase templates, CORS, and production Site URL must agree; these are coordinated TBD-16 steps. The verified production join URL is **https://client-pi-five-28.vercel.app/join**. Last verified production metadata identifies **fea2a07898e0a1289eff23746ef907e6710806a4**, deployment `dpl_G6Zbyvd9nnLJkT7AAb6PcBfLt7zc` (READY). The initial deployment at `2c5ebe0fa33d929a85cc74d47807199c162aac7a`, `dpl_4umzXBnL2yQFKQAjksSZaFuJEMJJ`, is a **historical verification checkpoint**; its evidence is preserved below. Neither an automatic preview attempt nor a local build establishes deployed acceptance.
 
 ## Verification evidence
 
@@ -58,20 +58,20 @@ Latest full browser run: **38 passed, zero skipped** (19 scenarios in each of Ch
 
 Agent technical checks, production deployment, inbox delivery, and both live join/recovery flows passed; founder implementation review remains pending. Correct raw-MIME fragment links target the reviewed page. Exactly one business and one individual User match approved details and original Auth IDs. The remaining default subject text is a nonblocking configuration difference. Never publish contacts, tokens, credentials or private email screenshots.
 
-## Verified Vercel setup and production checkpoint
+## Historical Vercel setup and initial verification checkpoint
 
 Followed <https://vercel.com/get-started.md>. Global CLI 65.9.0 is authenticated as `robelk1738`; existing global Vercel plugin/guidance is enabled. Shared OAuth MCP `https://mcp.vercel.com` is configured via Codex's user-wide configuration and authenticated; documentation search and `list_teams` succeeded. The temporary local app-server tool helper can call this direct connection with `TBD_MCP_SERVER=vercel`; no model turn or credential extraction is involved. CLI project operations now work. Old bundled connector 404 responses are superseded by this working access path, not evidence that a new project is needed.
 
 Verified and configured **existing** project `prj_bjfGLoc1nxSWc9rdnZ7CDX7HLSXX`, `robel-kebedes-projects/client`: root `apps/web`, Node 22.x, Vite, npm ci, npm run build, dist. Only the three public VITE variables were set for production. No replacement project or repository was created. Root was linked only after global setup and explicit existing-project verification. Generated local OIDC files remain ignored; no credentials were committed.
 
-The production alias serves the exact reviewed client commit. Deployed bundle verification confirms the actual backend URL <https://tbd-user-api.onrender.com> and intended Supabase URL. Chromium and WebKit live checks passed:
+At this historical checkpoint, the production alias served `2c5ebe0fa33d929a85cc74d47807199c162aac7a`. Historical deployed bundle verification confirmed the actual backend URL <https://tbd-user-api.onrender.com> and intended Supabase URL. Chromium and WebKit live checks passed:
 
 - `/join` returns 200 and shows the button, with no Auth verification or User creation on initial load.
 - Fragment is scrubbed; no persistent browser session/cookies.
 - Explicit click on a synthetic invalid hash calls real Supabase exactly once, gets 403, displays recovery guidance, and makes no application User-creation request.
 - Response headers include no-store, no-referrer and nosniff.
 
-Backend used: accepted live commit `a9045c8d4ef369188581c35d2fe21004aa80590f`. No backend changes or prior acceptance reruns were required for Vercel setup.
+Backend used for this historical checkpoint: accepted live commit `a9045c8d4ef369188581c35d2fe21004aa80590f`. No backend changes or prior acceptance reruns were required for Vercel setup.
 
 ## Reconciled live acceptance
 
