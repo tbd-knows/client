@@ -76,6 +76,8 @@ Backend used: accepted live commit `a9045c8d4ef369188581c35d2fe21004aa80590f`. N
 
 Live email checkpoint: initial invitations and fresh resends reached both authorized aliases in the verified Gmail inbox. Fresh Invite and Magic Link emails still have default subjects and Supabase `/auth/v1/verify` links. These links were left unopened by the acceptance sequence. Both entries have zero application Users; the individual Auth identity had already been confirmed, while the business identity remains unconfirmed. Correct both templates below and verify fresh rendered output before testing real-link passive GET, explicit Join, valid-token API failure, retry, reload and founder-resend recovery. The Dashboard browser redirects to sign-in, and connected database tools cannot edit Auth templates. Both existing PRs remain unmerged and TBD-16 remains In Progress. Accepted deployment/local checks are preserved; no code changes or local test reruns were needed for this checkpoint.
 
+Rechecked after the founder's second save confirmation: fresh messages at **2026-11-01 12:33:33–12:33:34 UTC** still render defaults. Message metadata matches the intended project; the business message's raw MIME confirms the same link. Both application User counts remain zero, and no received link was opened. Next configuration diagnostic: fully reload and reopen both template editors, check that the values persist, and inspect any save error. Preserve the current SMTP/signup settings and Auth identities.
+
 
 ## Supabase Dashboard ready-to-paste batch
 
